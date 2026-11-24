@@ -1,0 +1,60 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+<!--
+    <record model="ir.ui.view" id="meta_messaging.list">
+      <field name="name">meta_messaging list</field>
+      <field name="model">meta_messaging.meta_messaging</field>
+      <field name="arch" type="xml">
+        <list>
+          <field name="name"/>
+          <field name="value"/>
+          <field name="value2"/>
+        </list>
+      </field>
+    </record>
+-->
+
+    <!-- actions opening views on models -->
+<!--
+    <record model="ir.actions.act_window" id="meta_messaging.action_window">
+      <field name="name">meta_messaging window</field>
+      <field name="res_model">meta_messaging.meta_messaging</field>
+      <field name="view_mode">list,form</field>
+    </record>
+-->
+
+    <!-- server action to the one above -->
+<!--
+    <record model="ir.actions.server" id="meta_messaging.action_server">
+      <field name="name">meta_messaging server</field>
+      <field name="model_id" ref="model_meta_messaging_meta_messaging"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "list,form",
+          "res_model": model._name,
+        }
+      </field>
+    </record>
+-->
+
+    <!-- Top menu item -->
+<!--
+    <menuitem name="meta_messaging" id="meta_messaging.menu_root"/>
+-->
+    <!-- menu categories -->
+<!--
+    <menuitem name="Menu 1" id="meta_messaging.menu_1" parent="meta_messaging.menu_root"/>
+    <menuitem name="Menu 2" id="meta_messaging.menu_2" parent="meta_messaging.menu_root"/>
+-->
+    <!-- actions -->
+<!--
+    <menuitem name="List" id="meta_messaging.menu_1_list" parent="meta_messaging.menu_1"
+              action="meta_messaging.action_window"/>
+    <menuitem name="Server to list" id="meta_messaging" parent="meta_messaging.menu_2"
+              action="meta_messaging.action_server"/>
+-->
+  </data>
+</odoo>
